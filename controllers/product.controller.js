@@ -14,7 +14,7 @@ exports.findOne = async(req, res) => {
     console.log('Find a product');
     const productId = req.params._id;
     try {
-        const result = await Product.findOne({productId: _id});
+        const result = await Product.findOne({_id: productId});
         res.status(200).json({data: result});
     } catch (error) {
         console.log(`Problem in reading product, ${error}`)
